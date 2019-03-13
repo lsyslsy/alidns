@@ -1,4 +1,5 @@
 {
 	"AccessKeyID" : "key id",
-	"AccessKeySecret" : "AccessKeySecret"
+	"AccessKeySecret" : "AccessKeySecret",
+	"Domain": 'git'
 }

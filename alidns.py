@@ -1,10 +1,12 @@
 import json
 import urllib.request
+import os
 from aliyunsdkcore.client import AcsClient
 from aliyunsdkcore.request import CommonRequest
 from aliyunsdkcore.acs_exception.exceptions import ServerException
 
-with open('config.json') as file:
+config_file_patch = os.path.dirname(__file__) + '/config.json'
+with open(config_file_patch) as file:
     config = json.loads(file.read())
 
 client = AcsClient(config['AccessKeyID'], config['AccessKeySecret'], 'default')
@@ -64,6 +66,6 @@ def get_public_ip():
     jsonstr = response.read().decode()
     return json.loads(jsonstr)['ip']
 
-update_domain_record('gitlab')
+update_domain_record(config['Domain'])
 
 
