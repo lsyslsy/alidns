@@ -1,4 +1,8 @@
 # alidns
+
+# about
+It`s a program to dynamic change the domain resolve record if you have an aliyun dns resovler or a domain.（阿里云解析或者域名）
+# usage
 1. Install the python depend
 pip install -r requirement.txt
 
