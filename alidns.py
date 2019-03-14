@@ -5,7 +5,7 @@ from aliyunsdkcore.client import AcsClient
 from aliyunsdkcore.request import CommonRequest
 from aliyunsdkcore.acs_exception.exceptions import ServerException
 
-config_file_patch = os.path.dirname(__file__) + '/config.json'
+config_file_patch = os.path.dirname(os.path.abspath(__file__)) + '/config.json'
 with open(config_file_patch) as file:
     config = json.loads(file.read())
 
